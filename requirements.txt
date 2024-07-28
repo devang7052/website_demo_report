@@ -8,3 +8,4 @@ svgpathtools
 seaborn
 svgpath2mpl
 fpdf
+mplcursors
