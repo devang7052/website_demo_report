@@ -30,7 +30,7 @@ def upload_file():
         generation_status[task_id] = 'processing'
         file_name=process_data(data, option,csv_file)
         # /opt/render/project/src/pakages/images/dir_overshoot_chart.png
-        pdf_file_path= f'/opt/render/project/src/pakages/pdf_s/{file_name}'
+        pdf_file_path= f'pdf_s/{file_name}'
         generation_status[task_id] = 'completed'
         return jsonify({'task_id': task_id, 'file_path': pdf_file_path})
 
@@ -70,7 +70,6 @@ def extract_between_file(input_string):
     import re
     # Use regex to find the content between the first pair of quotes
     match = re.search(r"'([^']*)'", input_string)
-    print(match)
     if match:
         return match.group(1)
     else:
