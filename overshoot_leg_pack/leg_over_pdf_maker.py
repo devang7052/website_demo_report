@@ -116,7 +116,7 @@ class PDF_leg(FPDF):
 
         plt.tight_layout()
         # plt.show()
-        pichart_img_path = 'pakages/images/pi_chart.png'
+        pichart_img_path = '/opt/render/project/src/pakages/images/pi_chart.png'
         plt.savefig(pichart_img_path, bbox_inches='tight')
         self.pichart_img_path = pichart_img_path
         plt.close()
@@ -136,11 +136,12 @@ class PDF_leg(FPDF):
         self.chapter_title("Overshoot Time as Percentage of Total Time")
         self.make_pi_chart()
         self.chapter_body(self.pichart_img_path)
-        self.output(f'pakages/pdf_s/{self.file_name}.pdf')
+        # /opt/render/project/src/pakages/images/dir_overshoot_chart.png
+        self.output(f'/opt/render/project/src/pakages/pdf_s/{self.file_name}.pdf')
         return f'{self.file_name}.pdf'
 # Example usage:
 #okmfnfnk
 
-if __name__=='__main__':
-    obj=PDF_leg(r'E:\internship\hyperlab\Hyperlab-Imu-Analytics\overlapped.png',[2.3],10,[2])
-    obj.make_pi_chart()
+# if __name__=='__main__':
+#     obj=PDF_leg(r'E:\internship\hyperlab\Hyperlab-Imu-Analytics\overlapped.png',[2.3],10,[2])
+#     obj.make_pi_chart()
