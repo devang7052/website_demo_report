@@ -165,7 +165,7 @@ class stopping:
         ax.set_ylim([data['Zla'][self.blink_index-5:self.tap_index[-1]].min()-15, data['Zla'][self.blink_index:self.tap_index[-1]].max()+15])  # Set y-axis limits with padding
 
         # Save the plot as an image
-        image_path = 'pakages/images/stop_drill_chart.png'
+        image_path = 'images/stop_drill_chart.png'
         plt.savefig(image_path)
         plt.close()
       return image_path, stop_time
@@ -176,16 +176,3 @@ class stopping:
         time_data.append(self.time[i]/1000)
       return time_data
 
-if __name__=='__main__':
-  # import pandas as pd
-  # # df =pd.read_csv("drills/test_drills/neel_squre_overshoot.csv")
-  # # df = pd.read_csv("drills/test_d/kevin_long_overshoot.csv")
-  df = pd.read_csv("drills/test_drills/top_view_data.csv")
-  # df = pd.read_csv("drills/test_drills/ashray_studio_shapes.csv")
-
-  orbit1 = stopping(df)
-  # # orbit1 = stopping("drills/test_drills/neel_squre_overshoot.csv")
-  # # # # orbit1 = stopping("drills/test_drills/ashray_studio_run.csv")
-  # # orbit1.plot_everything(heading=False,leg_overshoot=False,mark=True) 
-  _,st=orbit1.mark_stops()
-  print(st) 

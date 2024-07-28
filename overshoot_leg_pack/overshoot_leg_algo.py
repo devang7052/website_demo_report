@@ -159,7 +159,7 @@ class leg_overshooting:
         ax.set_ylim([data['Zla'][self.blink_index-5:self.tap_index[-1]].min()-15, data['Zla'][self.blink_index:self.tap_index[-1]].max()+15])  # Set y-axis limits with padding
 
         # Save the plot as an image
-        image_path = 'pakages/images/overshoot_chart.png'
+        image_path = 'images/overshoot_chart.png'
         plt.savefig(image_path)
         plt.close()
       total_time=(self.time[self.tap_index[-1]]-self.time[self.blink_index])/1000

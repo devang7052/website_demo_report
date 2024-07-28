@@ -96,7 +96,7 @@ class PDF(FPDF):
         plt.yticks(fontsize=12)
         plt.grid(True, which='both', linestyle='--', linewidth=0.5, alpha=0.7)
         
-        chart_img_path = 'pakages/images/stop_chart.png'
+        chart_img_path = 'images/stop_chart.png'
         plt.savefig(chart_img_path, bbox_inches='tight', dpi=300)
         self.chart_img_path = chart_img_path
         plt.close()
@@ -117,6 +117,6 @@ class PDF(FPDF):
         self.make_stop_chart()
         self.chapter_body(self.chart_img_path)
         
-        self.output('pakages/pdf_s/output_stop.pdf')
+        self.output('pdf_s/output_stop.pdf')
 
         return 'output_stop.pdf'
