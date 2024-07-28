@@ -8,4 +8,3 @@ svgpathtools
 seaborn
 svgpath2mpl
 fpdf
-PIL
