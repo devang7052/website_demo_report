@@ -29,7 +29,8 @@ def upload_file():
         task_id = str(time.time())
         generation_status[task_id] = 'processing'
         file_name=process_data(data, option,csv_file)
-        pdf_file_path= f'E:/internship/hyperlab/Hyperlab-Imu-Analytics/pakages/pdf_s/{file_name}'
+        # /opt/render/project/src/pakages/images/dir_overshoot_chart.png
+        pdf_file_path= f'/opt/render/project/src/pakages/pdf_s/{file_name}'
         generation_status[task_id] = 'completed'
         return jsonify({'task_id': task_id, 'file_path': pdf_file_path})
 
