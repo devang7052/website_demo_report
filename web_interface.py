@@ -75,5 +75,5 @@ def extract_between_file(input_string):
     else:
         return None
 
-if __name__ == '__main__':
-    app.run(debug=True)
+# if __name__ == '__main__':
+#     app.run(debug=True)
