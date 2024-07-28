@@ -1,0 +1,8 @@
+flask
+gunicorn
+numpy
+pandas 
+scipy
+matplotlib
+svgpathtools
+seaborn
